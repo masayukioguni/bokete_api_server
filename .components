@@ -7,3 +7,4 @@
 :stylesheet: sass
 :namespace: BoketeApiServer
 :migration_format: number
+:admin_renderer: haml

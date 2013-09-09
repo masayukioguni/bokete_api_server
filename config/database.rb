@@ -14,6 +14,44 @@
 #   }
 #
 ActiveRecord::Base.configurations[:development] = {
+     :adapter   => 'mysql2',
+     :encoding  => 'utf8',
+     :reconnect => true,
+     :database  => 'bokete_development',
+     :pool      => 5,
+     :username  => 'admin',
+     :password  => 'admin',
+     :host      => 'localhost',
+     :socket    => '/tmp/mysql.sock'
+}
+
+ActiveRecord::Base.configurations[:test] = {
+     :adapter   => 'mysql2',
+     :encoding  => 'utf8',
+     :reconnect => true,
+     :database  => 'bokete_test',
+     :pool      => 5,
+     :username  => 'admin',
+     :password  => 'admin',
+     :host      => 'localhost',
+     :socket    => '/tmp/mysql.sock'
+}
+
+
+ActiveRecord::Base.configurations[:production] = {
+     :adapter   => 'mysql2',
+     :encoding  => 'utf8',
+     :reconnect => true,
+     :database  => 'bokete',
+     :pool      => 5,
+     :username  => 'admin',
+     :password  => 'admin',
+     :host      => 'localhost',
+     :socket    => '/tmp/mysql.sock'
+}
+
+=begin
+ActiveRecord::Base.configurations[:development] = {
   :adapter => 'sqlite3',
   :database => Padrino.root('db', 'bokete_api_server_development.db')
 
@@ -30,7 +68,7 @@ ActiveRecord::Base.configurations[:test] = {
   :database => Padrino.root('db', 'bokete_api_server_test.db')
 
 }
-
+=end
 # Setup our logger
 ActiveRecord::Base.logger = logger
 
