@@ -27,8 +27,10 @@
                       =submit_tag pat(:delete), :class =>'list-menu-popover-delete-selected-btn btn btn-danger btn-small'
                       .btn.btn-small.cancel=pat(:cancel)
         %th.header= mat(:boke, :id)
-        %th.header= mat(:boke, "boke_id")
+        %th.header= mat(:boke, :boke_id)
         %th.header= mat(:boke, :boke)
+        %th.header= mat(:boke, :image_url)
+        %th.header= mat(:boke, :url)
         %th.header= mat(:boke, :created_at)
         %th.header= mat(:boke, :updated_at)
         %th.header.list-row-action-header
@@ -41,6 +43,8 @@
           %td.list-column=boke.id
           %td.list-column=boke.boke_id
           %td.list-column=boke.boke
+          %td.list-column=boke.image_url
+          %td.list-column=boke.url
           %td.list-column=time_ago_in_words boke.created_at
           %td.list-column=time_ago_in_words boke.updated_at
           %td.list-column.list-row-action

@@ -10,6 +10,18 @@
   .controls
     =f.text_field :boke, :class => 'input-xlarge input-with-feedback'
     %span.help-inline=error ? f.error_message_on(:boke, :class => 'text-error') : pat(:example)
+- error = @boke.errors.include?(:image_url)
+%fieldset.control-group{:class => error ? 'has-error' : ''}
+  =f.label :image_url, :class => 'control-label'
+  .controls
+    =f.text_field :image_url, :class => 'input-xlarge input-with-feedback'
+    %span.help-inline=error ? f.error_message_on(:image_url, :class => 'text-error') : pat(:example)
+- error = @boke.errors.include?(:url)
+%fieldset.control-group{:class => error ? 'has-error' : ''}
+  =f.label :url, :class => 'control-label'
+  .controls
+    =f.text_field :url, :class => 'input-xlarge input-with-feedback'
+    %span.help-inline=error ? f.error_message_on(:url, :class => 'text-error') : pat(:example)
 
 .form-actions
   =f.submit pat(:save), :class => 'btn btn-primary'
