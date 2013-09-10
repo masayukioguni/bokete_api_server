@@ -1,0 +1,37 @@
+- error = @user_boke.errors.include?(:user)
+%fieldset.control-group{:class => error ? 'has-error' : ''}
+  =f.label :user, :class => 'control-label'
+  .controls
+    =f.text_field :user, :class => 'input-xlarge input-with-feedback', :autofocus => true
+    %span.help-inline=error ? f.error_message_on(:user, :class => 'text-error') : pat(:example)
+- error = @user_boke.errors.include?(:bokete_id)
+%fieldset.control-group{:class => error ? 'has-error' : ''}
+  =f.label :bokete_id, :class => 'control-label'
+  .controls
+    =f.text_field :bokete_id, :class => 'input-xlarge input-with-feedback'
+    %span.help-inline=error ? f.error_message_on(:bokete_id, :class => 'text-error') : pat(:example)
+- error = @user_boke.errors.include?(:boke)
+%fieldset.control-group{:class => error ? 'has-error' : ''}
+  =f.label :boke, :class => 'control-label'
+  .controls
+    ~f.text_area :boke, :class => 'input-xlarge input-with-feedback'
+    %span.help-inline=error ? f.error_message_on(:boke, :class => 'text-error') : pat(:example)
+- error = @user_boke.errors.include?(:image_url)
+%fieldset.control-group{:class => error ? 'has-error' : ''}
+  =f.label :image_url, :class => 'control-label'
+  .controls
+    =f.text_field :image_url, :class => 'input-xlarge input-with-feedback'
+    %span.help-inline=error ? f.error_message_on(:image_url, :class => 'text-error') : pat(:example)
+- error = @user_boke.errors.include?(:url)
+%fieldset.control-group{:class => error ? 'has-error' : ''}
+  =f.label :url, :class => 'control-label'
+  .controls
+    =f.text_field :url, :class => 'input-xlarge input-with-feedback'
+    %span.help-inline=error ? f.error_message_on(:url, :class => 'text-error') : pat(:example)
+
+.form-actions
+  =f.submit pat(:save), :class => 'btn btn-primary'
+  &nbsp;
+  =f.submit pat(:save_and_continue), :class => 'btn btn-info', :name => 'save_and_continue'
+  &nbsp;
+  =link_to pat(:cancel), url(:user_bokes, :index), :class => 'btn'

@@ -1,5 +1,3 @@
 class Boke < ActiveRecord::Base
-  # ヘルパーでやろうとしたが、hamlでエラーが出たのでここで回避
-
-  
+  default_scope { order(:created_at) }  
 end

@@ -34,6 +34,7 @@ module BoketeApiServer
     end
 
     access_control.roles_for :admin do |role|
+    role.project_module :user_bokes, '/user_bokes'
     role.project_module :bokes, '/bokes'
     role.project_module :accounts, '/accounts'
     end

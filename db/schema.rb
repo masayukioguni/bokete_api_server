@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 4) do
+ActiveRecord::Schema.define(:version => 5) do
 
   create_table "accounts", :force => true do |t|
     t.string   "name"
@@ -30,6 +30,16 @@ ActiveRecord::Schema.define(:version => 4) do
     t.datetime "updated_at", :null => false
     t.string   "image_url"
     t.string   "url"
+  end
+
+  create_table "user_bokes", :force => true do |t|
+    t.string   "user"
+    t.integer  "bokete_id"
+    t.text     "boke"
+    t.string   "image_url"
+    t.string   "url"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
 end
