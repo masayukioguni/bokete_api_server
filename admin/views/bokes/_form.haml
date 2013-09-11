@@ -2,8 +2,8 @@
 %fieldset.control-group{:class => error ? 'has-error' : ''}
   =f.label :boke_id, :class => 'control-label'
   .controls
-    =f.text_field :boke_id, :class => 'input-xlarge input-with-feedback', :autofocus => true
-    %span.help-inline=error ? f.error_message_on(:boke_id, :class => 'text-error') : pat(:example)
+    =f.text_field :bokete_id, :class => 'input-xlarge input-with-feedback', :autofocus => true
+    %span.help-inline=error ? f.error_message_on(:bokete_id, :class => 'text-error') : pat(:example)
 - error = @boke.errors.include?(:boke)
 %fieldset.control-group{:class => error ? 'has-error' : ''}
   =f.label :boke, :class => 'control-label'

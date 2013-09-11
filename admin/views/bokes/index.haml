@@ -27,7 +27,7 @@
                       =submit_tag pat(:delete), :class =>'list-menu-popover-delete-selected-btn btn btn-danger btn-small'
                       .btn.btn-small.cancel=pat(:cancel)
         %th.header= mat(:boke, :id)
-        %th.header= mat(:boke, :boke_id)
+        %th.header= mat(:boke, :bokete_id)
         %th.header= mat(:boke, :boke)
         %th.header= mat(:boke, :image_url)
         %th.header= mat(:boke, :url)
@@ -41,7 +41,7 @@
           %td.list-column.list-selectable
             =check_box_tag 'boke_ids[]', :value => boke.id, :class => 'list-selectable-checkbox'
           %td.list-column=boke.id
-          %td.list-column=boke.boke_id
+          %td.list-column=boke.bokete_id
           %td.list-column=boke.boke
           %td.list-column=boke.image_url
           %td.list-column=boke.url

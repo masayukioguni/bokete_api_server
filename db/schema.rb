@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(:version => 5) do
   end
 
   create_table "bokes", :force => true do |t|
-    t.integer  "boke_id"
+    t.integer  "bokete_id"
     t.string   "boke"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
@@ -33,7 +33,7 @@ ActiveRecord::Schema.define(:version => 5) do
   end
 
   create_table "user_bokes", :force => true do |t|
-    t.string   "user"
+    t.string   "user_name"
     t.integer  "bokete_id"
     t.text     "boke"
     t.string   "image_url"
