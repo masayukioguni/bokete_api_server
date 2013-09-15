@@ -59,5 +59,10 @@ module BoketeApiServer
     #     render 'errors/505'
     #   end
     #
+
+    get :index do
+        render 'index'
+    end
+
   end
 end
